@@ -1,5 +1,27 @@
 
-<mat-sidenav-container fullscreen>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <button mat-icon-button (click)="headerToggle = !headerToggle">
+        <mat-icon>menu</mat-icon>
+    </button>
+    
+    @if (this.headerToggle == true) {
+        <div style="display: flex; align-items: center;">
+            <span style="width: 2rem;">{{sliderNumber}}</span>
+            <mat-slider min="0" max="5" step="0.5"> <!-- Aquí NO iría, como dice la web -->
+                <input matSliderThumb [(ngModel)]="sliderNumber">
+            </mat-slider>
+        </div>
+        
+        <mat-slider min="10" max="21">
+            <input matSliderStartThumb value="12">
+            <input matSliderEndThumb value="15">
+        </mat-slider>
+    } @else {
+        <h3>Angular Material DEMO</h3>
+    }
+</div>
+
+<mat-sidenav-container>
 
     <mat-sidenav #sidenav>
 

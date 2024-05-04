@@ -27,7 +27,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
-import { ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CreateCourseComponent} from './create-course/create-course.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {CreateCourseStep1Component} from './create-course/create-course-step-1/create-course-step-1.component';
@@ -62,6 +62,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         VirtualScrollingComponent
     ],
     imports: [
+        FormsModule,
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
